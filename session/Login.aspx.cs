@@ -27,5 +27,23 @@ namespace session
                 Response.Write("<script>alert('登录失败！请返回查找原因');location='Login.aspx'</script>");
             }
         }
+
+
+        //训练十一：
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string name = this.UserName.Text;
+            string pwd = this.UserPwd.Text;
+            if (name == "admin" && pwd == "admin123456")
+            {
+                Session["NickName"] = "管理员";
+                Response.Redirect("Index.aspx");
+            }
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Login", "alert(\"用户名或密码错误，请重试\")", true);
+            }
+        }
     }
 }
