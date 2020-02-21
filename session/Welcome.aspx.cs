@@ -13,6 +13,13 @@ namespace session
         {
             Response.Write("欢迎用户"+Session["UserName"].ToString()+"登录本系统！<br>");
             Response.Write("您登录的时间为："+Session["LoginTime"].ToString());
+
+            if (!IsPostBack)
+            {
+                Guid guid = Guid.NewGuid();
+                Session["guid"] = guid.ToString();
+                this.token.Value = guid.ToString();
+            }
         }
     }
 }

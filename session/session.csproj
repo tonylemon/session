@@ -70,6 +70,7 @@
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="ToSubmit.aspx" />
     <Content Include="Web.config" />
     <Content Include="Welcome.aspx" />
   </ItemGroup>
@@ -92,6 +93,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToSubmit.aspx.cs">
+      <DependentUpon>ToSubmit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ToSubmit.aspx.designer.cs">
+      <DependentUpon>ToSubmit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.aspx.cs">
       <DependentUpon>Welcome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
